@@ -294,7 +294,7 @@ def load_excel_file():
             filtered_passif = data_passif[data_passif["Postes"].isin(passif_labels_of_interest)]
 
             # Feuille CPC
-            data_2 = pd.read_excel("BILAN CPC MARSA MAROC.xlsx", sheet_name=1)
+            data_2 = pd.read_excel("bilan_resultat.xlsx", sheet_name=1)
             data_2.drop(["CPC Consolidé", "Unnamed: 1", "Unnamed: 2", "Unnamed: 3"], axis = 1, inplace = True)
             data_2.drop(index=[0, 1, 2], inplace = True)
             data_2.columns = ["Postes", "Montants"]
